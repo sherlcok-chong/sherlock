@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title2</title>
+    <style>
+        p{
+            text-align: center;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+        <!--
+        <img id="person" src="img0.png\" width=100%>
+
+        <input type="button" value="开" id="123">
+        <br>
+        <input type="button" value="关" id="456">
+        -->
+        <p>
+            <span id="123">5</span>秒之后跳转到首页
+        </p>
+    <script>
+        // var num=1;
+        // var num2=NaN;
+        //
+        // document.write(num+"<br>");
+        // document.write(num2+"<br>");
+        //
+        // var s="abc";
+        // var s2='ac';
+        // document.write(s+"<br>");
+        // document.write(s2+"<br>");
+        //
+        // var n=null;
+        // var n2=undefined;
+        // document.write(n+"<br>");
+        // document.write(n2+"<br>");
+
+        // var arr1 = new Array(1,2,3);
+        // var arr2 = new Array(5);
+        // var arr3 = [1,2,3];
+        //
+        // document.write(arr1+"<br>");
+        // document.write(arr2+"<br>");
+        // document.write(arr3+"<br>");
+
+        // var reg =new RegExp("\w(2,)")
+        // var reg2 = /\w(3,7)/;
+        //
+        // document.write(reg)
+        // document.write(reg2)
+
+        //DOM:控制HTML文档内容
+        // var flag =false;
+        // function f() {
+        //     if(!flag){
+        //         img.src= "258.jpg";
+        //         flag =true;
+        //     }
+        //     else{
+        //         img.src= "123.png";
+        //         flag =false;
+        //     }
+        //
+        // }
+        // var img = document.getElementById("person");
+        // img.onclick=f;
+        // var op = document.getElementById("123");
+        // var cl = document.getElementById("456");
+        // op.onclick=function (){
+        //     newopen=open();
+        // }
+        // cl.onclick=function (){
+        //     newopen.close();
+        // }
+        // var num=0;
+        // function fun(){
+        //     num++;
+        //     num%=2
+        //     var img = document.getElementById("person");
+        //     img.src="img"+num+".png";
+        // }
+        //
+        // setInterval(fun , 3000);
+        var second=5;
+        function showtime(){
+            second--;
+            if (second<=0) {
+                location.href="https://www.baidu.com/ "
+            }
+          var time = document.getElementById("123");
+          time.innerHTML=second+"";
+
+        }
+        setInterval(showtime,1000)
+    </script>
+</body>
+</html>

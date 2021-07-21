@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        /*.box1{*/
+        /*    background-image: url("img0.png");*/
+
+        /*}*/
+        .box {
+            width: 700px;
+            height: 600px;
+            text-align: center;
+            position: relative;
+            /*background-color: aquamarine;*/
+            margin: auto;
+        }
+        .box3{
+            background-color: bisque;
+        }
+        .aa{
+            margin: auto;
+            width: 500px;
+        }
+        tr{
+            height: 50px;
+        }
+        span{
+            color: red;
+        }
+    </style>
+
+
+
+
+</head>
+<body class="box1">
+<div class="box">
+    <h3 class="box3">信息注册界面</h3>
+    <form action="www.baidu.com" method="post" id="form">
+
+        <table width="500" class="aa">
+            <tr>
+                <td>账户</td>
+                <td>
+                    <input type="text" id="userName">
+                    <span id="nameError" ></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td>确认密码</td>
+                <td>
+                    <input type="password" id="rePassword">
+                    <span id="passwordError"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>
+                    <label for="man">男</label><input type="radio" name="sex" id="man" checked="checked">
+                    <label for="woman">女</label></label><input type="radio" name="sex" id="woman">
+                </td>
+            </tr>
+            <tr>
+                <td>生日</td>
+                <td>
+                    <select>
+                        <option>--选择年--</option>
+                        <option>--2002--</option>
+                        <option>--2003--</option>
+                        <option>--2004--</option>
+                    </select>
+                    <select>
+                        <option>--选择月--</option>
+                        <option>--1--</option>
+                        <option>--2--</option>
+                        <option>--3--</option>
+                    </select>
+                    <select>
+                        <option>--选择日--</option>
+                        <option>--1--</option>
+                        <option>--2--</option>
+                        <option>--3--</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>兴趣爱好</td>
+                <td>
+                    学Go<input type="checkbox" name="check">
+                    学Java<input type="checkbox" name="check">
+                    学C++<input type="checkbox" name="check">
+                    <input type="button" id="selectAll" value="全选">
+                    <input type="button" id="unselectAll" value="全不选">
+                    <input type="button" id="reselectAll" value="反选">
+                </td>
+            </tr>
+            <tr>
+                <td>其他补充</td>
+                <td><textarea>在这里输入</textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="提交"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a href="re.html">我是会员马上登录</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script>
+    function checkUsername(){
+
+        var userName=document.getElementById("userName").value;
+        var reg_username=/^\w{6,12}$/;
+        var test=reg_username.test(userName);
+        var nameError=document.getElementById("nameError");
+
+        if (!test){
+            nameError.innerHTML="用户名格式错误";
+           // alert("用户名格式错误");
+        }
+
+        return test;
+    }
+
+    function checkPassword(){
+        var password=document.getElementById("password").value;
+        var rePassword=document.getElementById("rePassword").value;
+        var reg_username=/^\w{6,12}$/;
+        var test=reg_username.test(password);
+        var passError=document.getElementById("passwordError");
+        if (!test){
+            passError.innerHTML="密码格式错误";
+           // alert("密码格式错误");
+            return test;
+        }
+        if (password!==rePassword){
+            passError.innerHTML="前后密码不一致";
+           // alert("前后密码不一致");
+
+            return false;
+        }
+        return true;
+    }
+    document.getElementById("form").onsubmit = function (){
+        return checkUsername()&&checkPassword();
+    }
+    window.onload = function () {
+        document.getElementById("selectAll").onclick = function () {
+            var cbs = document.getElementsByName("check");
+            for (var i = 0; i < cbs.length; i++) {
+                cbs[i].checked = true;
+            }
+        }
+        document.getElementById("unselectAll").onclick = function () {
+            var cbs = document.getElementsByName("check");
+            for (var i = 0; i < cbs.length; i++) {
+                cbs[i].checked = false;
+            }
+        }
+        document.getElementById("reselectAll").onclick = function () {
+            var cbs = document.getElementsByName("check");
+            for (var i = 0; i < cbs.length; i++) {
+                cbs[i].checked = cbs[i].checked === false;
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>

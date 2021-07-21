@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        .box1{
+            background-image: url("img0.png");
+            position: absolute;
+        }
+        .box {
+            width: 700px;
+            height: 600px;
+            text-align: center;
+            position: relative;
+            background-color: aquamarine;
+            margin: auto;
+        }
+        table{
+            border: 1px solid;
+            margin: auto;
+            width: 500px;
+        }
+        td,th{
+            text-align: center;
+            border: 1px solid;
+        }
+        span{
+            color: red;
+        }
+        <img src="img0.png" height="1080" width="1920"/></style>
+</head>
+<body>
+<div class="box">
+    <h3>信息注册界面</h3>
+    <form action="#" method="post" id="form">
+
+        <table width="500">
+            <tr>
+                <td>账户</td>
+                <td>
+                    <input type="text" id="userName">
+                    <span id="nameError"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td>确认密码</td>
+                <td>
+                    <input type="password" id="rePassword">
+                    <span id="passwordError"></span>
+                </td>
+
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>
+                    <label for="man">男</label><input type="radio" name="sex" id="man" checked="checked">
+                    <label for="woman">女</label></label><input type="radio" name="sex" id="woman">
+                </td>
+            </tr>
+            <tr>
+                <td>生日</td>
+                <td>
+                    <select>
+                        <option>--选择年--</option>
+                        <option>--2002--</option>
+                        <option>--2003--</option>
+                        <option>--2004--</option>
+                    </select>
+                    <select>
+                        <option>--选择月--</option>
+                        <option>--1--</option>
+                        <option>--2--</option>
+                        <option>--3--</option>
+                    </select>
+                    <select>
+                        <option>--选择日--</option>
+                        <option>--1--</option>
+                        <option>--2--</option>
+                        <option>--3--</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>兴趣爱好</td>
+                <td>
+                    学Go<input type="checkbox" name="check">
+                    学Java<input type="checkbox" name="check">
+                    学C++<input type="checkbox" name="check">
+                    <input type="button" id="selectAll" value="全选">
+                    <input type="button" id="unselectAll" value="全不选">
+                    <input type="button" id="reselectAll" value="反选">
+                </td>
+            </tr>
+            <tr>
+                <td>其他补充</td>
+                <td><textarea>在这里输入</textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="提交"></td>
+            </tr>
+
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

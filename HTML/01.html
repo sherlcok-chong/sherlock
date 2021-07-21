@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>？？？？</title>
+</head>
+
+<body>
+    以下标签如无特殊注释都是双标签<br \>
+    <h2>标题标签1-6都可以</h2>
+    <p>《p》《\p》段落标签</p><br \> 《br \》换行标签强制换行，单标签，只是换行<br \>
+    <strong>《strong》语义强烈于《strong》</strong><b>语义强烈于 《b》</b><br \>
+    <em>《em》or 《i》倾斜</em><br \>
+    <del>《del》《s》删除线</del><br \>
+    <ins>《ins》或者《u》下划线</ins><br \> 《div》《span》
+    <br \>
+    <h4>《ing》是单标签</h4>
+    <img src="123.png" /> alt替换文本图像显示不出来就用文字替换
+    <br \>
+    <img src="1234.png" alt="再见" /> title 提示文本 鼠标放到图像上提示提示的文字<br \>
+    <img src="123.png" title="..." /> 《width》图像的宽度
+    <br \>
+    <img src="123.png" width="500" /> 《height》图像的高度只修改一个就行
+    <br \>
+    <img src="123.png" height="400" /> 《border》给图像设定边框
+    <br \>
+    <img src="123.png" height="400" border="20" /> 《a》《/a》链接标签其中的“href”后面跟链接的地址
+    <br> 空链接href="#"；
+    <br> 下载链接地址链接的是文件 .exe或者.zip,href="***.zip"<br>
+    <a href="https://www.baidu.com/" target="_self"> 百度</a><br> 任何元素都可以添加超链接
+    <br> target 打开窗口的方式 默认 _self当前窗口打开 还有_blank型窗口打开<br>
+    <img src="https://www.baidu.com/img/PCdong_eab05f3d3a8e54ca5a0817f09b39d463.gif" width="300" /><br> 锚点链接定位页面中的，某个位置
+    <br> 《a herf=“#？？？”》*****《\a》<br>
+    <h2 id="">*****</h2>
+    <!--这是注释标签--><br>
+    <!-- ctrl+/快速添加注释 --><br> 特殊字符空格&nbsp;一个空格
+    <br> &lt;小于号&gt;大于号
+    <br> 表格标签
+    <br>
+    <!-- <table></table>用于定义表格表格标签<tr><\tr>用于定于行<td><\td>-->
+    <table width=300>
+        ???????
+        <tr>第一个单元格</tr>
+        <td>第二个单元格</td>
+
+    </table>
+    <!-- 表头单元格 -->
+    <table>
+        <tr>
+            <th>表头1</th>表头2</tr>
+        <tr>
+            <td>文件1</td>文件2</tr>
+    </table>
+    <!-- 表格属性 -->
+    <!-- 要写到table里面去 -->
+    <!--align 属性left,center,right 对齐方式 -->
+    <!--borde 属性1表示有边框 “”无边框 -->
+    <!-- cellpadding  像素值 规定单元格与之间的空白，默认1像素 -->
+    <!-- cellspacing规定单元格之间的空白默认2两素 -->
+    <!-- width height规定表格宽度长度 -->
+    <!-- <thead>里面必须拥有<tr>标签<\thead>一般位于第一行 -->
+    <!--<tbody>用于定义表格的主体主要放数据主体  -->
+    <!--合并单元格  -->
+    <!-- 合并单元格的方式 -->
+    <!-- 跨行合并 ：rowspan=“合并单元格个数”,最上侧单元格为目标单元格,写合并代码-->
+    <!-- 跨列合并 ：colspan=“合并单元格个数”,最左侧单元格为目标单元格,写合并代码-->
+    <!-- 列表 -->
+    <!--无序列表  -->
+    <!-- 格式如下 -->
+
+    <!-- <ul>
+        <li>123</li>
+        <li>789</li>
+        <li>456</li>
+    </ul> -->
+
+    <!-- ul之中只能出现li其余都不可以 -->
+    <!-- <li>里面啥都能放 -->
+    <!-- 自带格式,及就是前面的小黑点 -->
+    <!-- 有序列表 -->
+
+    <!-- <ol>
+        <li>123</li>
+        <li>123</li>
+        <li>789</li>
+        <ol> -->
+
+    <!-- 注意事项同上 -->
+    <!-- 自定义列表 -->
+    <!-- 
+    <dl>
+         <dt>
+             <dd>
+
+             </dd>
+         </dt>
+    </dl>
+    -->
+    <!-- <dl>里面只能有dt与dd -->
+    <!-- 表单 -->
+    <!-- 由表单域,表单控件,提示信息3个部分组成-->
+    <!-- 表单域 -->
+    <!-- 把表单域内的元素信息传给服务器 -->
+    <form action="" method="POST" name="">
+        <!--里面的东西把不用管-->
+        用户名<input type="text">
+        <!--text输入文本文件-->
+        密码<input type="password">
+        <!--隐藏输入的-->
+
+        >diyi1<input type="radio" name="123">diyi1<input type="radio" name="123"><br>
+        <!--多选点<checkbox-->123<input type="checkbox">123<input type="checkbox"><br>
+        <input type="submit" ,vaule="123">
+        <!-- 点击按钮就可以把表单域<form>里面的值提交了 -->
+        <!-- <input type="reset">重置按钮  -->
+        <input type="button" value="anniu">
+        <a href="https://www.baidu.com/" target="_self"> <input type="button" value="anniu"></a><br>
+    </form>
+    <!-- 表单元素 -->
+    <!-- <input> 收集用户信息，单标签-->
+    <!-- 除了type之外其他的元素 name定义input元素的名称，vaule规定input的值-->
+    <!-- 单选框和复选框可以设置checked属性，当页面打开的时候就可以选择中这个按钮 -->
+    <!-- maxlength用户可输入的最大字符数 -->
+    <!-- 普通按钮button -->
+    <!-- 文件域按钮file -->
+    <!-- label标签 -->
+    <!-- 可以绑定表单元素 -->
+    <label for="123">yonghuhh</label>
+    <input type="text" id="123"><br>
+    <!--下拉表单-->hah
+    <select>
+        123<option value="#">12</option>
+        34<option value="#">14</option>
+        6576<option value="#">13</option>
+    </select>
+    <!-- <textarea ></textarea>文本域标签 -->
+    <!-- 里面有两个属性， cols rows不用记-->
+    <button ></button>
+</body>
+
+</html>

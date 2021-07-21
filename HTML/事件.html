@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格</title>
+
+    <style>
+        table {
+            border: 1px solid;
+            margin: auto;
+            width: 500px;
+        }
+
+        td, th {
+            text-align: center;
+            border: 1px solid;
+        }
+
+        div {
+            margin-top: 10px;
+            margin-left: 30%;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+
+    <input type="text" id="id" placeholder="请输入编号">
+    <input type="text" id="name" placeholder="请输入姓名">
+    <input type="text" id="gender" placeholder="请输入性别">
+    <input type="button" value="添加" id="add">
+</div>
+<table>
+    <caption>我也不知道叫啥</caption>
+    <tr>
+        <th><input type="checkbox" name="l"></th>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <th><input type="checkbox" name="l"></th>
+        <td> 123</td>
+        <td> 12</td>
+        <td> 1</td>
+        <td><a href="javascript:void(0)" onclick="del(this)">删除</a></td>
+    </tr>
+</table>
+<div>
+    <input type="button" id="selectAll" value="全选">
+    <input type="button" id="unselectAll" value="全不选">
+    <input type="button" id="reselectAll" value="反选">
+
+</div>
+
+<script>
+    function del(obj) {
+        var tr = obj.parentNode.parentNode;
+        var table = obj.parentNode.parentNode.parentNode;
+        table.removeChild(tr);
+    }
+
+    document.getElementById("add").onclick = function () {
+        var id = document.getElementById("id").value;
+        var name = document.getElementById("name").value;
+        var gender = document.getElementById("gender").value;
+        var table = document.getElementsByTagName("table")[0];
+        table.innerHTML += " <tr>\n" +
+            "<th><input type='checkbox' name='l'></th>" +
+            "              <td>  " + id + "</td>\n" +
+            "              <td>  " + name + "</td>\n" +
+            "              <td>  " + gender + "</td>\n" +
+            "              <td> <a href=\"javascript:void(0)\" onclick=\"del(this)\">删除</a> </td>\n" +
+            "          </tr>"
+    }
+
+    window.onload = function () {
+        document.getElementById("selectAll").onclick = function () {
+            var cbs = document.getElementsByName("l");
+            for (var i = 0; i < cbs.length; i++) {
+                cbs[i].checked = true;
+            }
+        }
+        document.getElementById("unselectAll").onclick = function () {
+            var cbs = document.getElementsByName("l");
+            for (var i = 0; i < cbs.length; i++) {
+                cbs[i].checked = false;
+            }
+        }
+        document.getElementById("reselectAll").onclick = function () {
+            var cbs = document.getElementsByName("l");
+            for (var i = 0; i < cbs.length; i++) {
+                if (cbs[i].checked === false) {
+                    cbs[i].checked = true;
+                } else {
+                    cbs[i].checked = false;
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
